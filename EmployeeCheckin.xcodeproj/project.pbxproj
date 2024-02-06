@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */; };
+		906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EE2B70F6D200DF7A62 /* Extensions.swift */; };
+		906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */; };
 		908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65C2B70E11F0027CFAD /* AppDelegate.swift */; };
 		908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */; };
-		908FE6612B70E11F0027CFAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6602B70E11F0027CFAD /* ViewController.swift */; };
-		908FE6642B70E11F0027CFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908FE6622B70E11F0027CFAD /* Main.storyboard */; };
+		908FE6612B70E11F0027CFAD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6602B70E11F0027CFAD /* MainVC.swift */; };
 		908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */; };
 		908FE6692B70E1200027CFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908FE6682B70E1200027CFAD /* Assets.xcassets */; };
 		908FE66C2B70E1200027CFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908FE66A2B70E1200027CFAD /* LaunchScreen.storyboard */; };
 		908FE6772B70E1200027CFAD /* EmployeeCheckinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6762B70E1200027CFAD /* EmployeeCheckinTests.swift */; };
 		908FE6812B70E1200027CFAD /* EmployeeCheckinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6802B70E1200027CFAD /* EmployeeCheckinUITests.swift */; };
 		908FE6832B70E1200027CFAD /* EmployeeCheckinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6822B70E1200027CFAD /* EmployeeCheckinUITestsLaunchTests.swift */; };
+		908FE6912B70E27E0027CFAD /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6902B70E27E0027CFAD /* CheckinView.swift */; };
+		908FE6932B70E41F0027CFAD /* NetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6922B70E41F0027CFAD /* NetworkingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		906BA1EE2B70F6D200DF7A62 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
+		906BA1F52B724B0500DF7A62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		908FE6592B70E11F0027CFAD /* EmployeeCheckin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeCheckin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908FE65C2B70E11F0027CFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		908FE6602B70E11F0027CFAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		908FE6632B70E11F0027CFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		908FE6602B70E11F0027CFAD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		908FE6662B70E11F0027CFAD /* EmployeeCheckin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCheckin.xcdatamodel; sourceTree = "<group>"; };
 		908FE6682B70E1200027CFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		908FE66B2B70E1200027CFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,8 @@
 		908FE67C2B70E1200027CFAD /* EmployeeCheckinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeCheckinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908FE6802B70E1200027CFAD /* EmployeeCheckinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCheckinUITests.swift; sourceTree = "<group>"; };
 		908FE6822B70E1200027CFAD /* EmployeeCheckinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCheckinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		908FE6902B70E27E0027CFAD /* CheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinView.swift; sourceTree = "<group>"; };
+		908FE6922B70E41F0027CFAD /* NetworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		906BA1E82B70F30B00DF7A62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				908FE6602B70E11F0027CFAD /* MainVC.swift */,
+				908FE6902B70E27E0027CFAD /* CheckinView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		906BA1EA2B70F33200DF7A62 /* LocalDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */,
+				906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */,
+			);
+			path = LocalDatabase;
+			sourceTree = "<group>";
+		};
+		906BA1ED2B70F6C300DF7A62 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				906BA1EE2B70F6D200DF7A62 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		906BA1F22B7238A800DF7A62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */,
+				908FE6922B70E41F0027CFAD /* NetworkingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		908FE6502B70E11F0027CFAD = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +145,15 @@
 		908FE65B2B70E11F0027CFAD /* EmployeeCheckin */ = {
 			isa = PBXGroup;
 			children = (
-				908FE65C2B70E11F0027CFAD /* AppDelegate.swift */,
-				908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */,
-				908FE6602B70E11F0027CFAD /* ViewController.swift */,
-				908FE6622B70E11F0027CFAD /* Main.storyboard */,
+				906BA1F52B724B0500DF7A62 /* README.md */,
+				908FE68F2B70E21B0027CFAD /* Delegates */,
+				906BA1E82B70F30B00DF7A62 /* Views */,
+				906BA1F22B7238A800DF7A62 /* ViewModels */,
+				906BA1EA2B70F33200DF7A62 /* LocalDatabase */,
+				906BA1ED2B70F6C300DF7A62 /* Utilities */,
 				908FE6682B70E1200027CFAD /* Assets.xcassets */,
 				908FE66A2B70E1200027CFAD /* LaunchScreen.storyboard */,
 				908FE66D2B70E1200027CFAD /* Info.plist */,
-				908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */,
 			);
 			path = EmployeeCheckin;
 			sourceTree = "<group>";
@@ -128,6 +173,15 @@
 				908FE6822B70E1200027CFAD /* EmployeeCheckinUITestsLaunchTests.swift */,
 			);
 			path = EmployeeCheckinUITests;
+			sourceTree = "<group>";
+		};
+		908FE68F2B70E21B0027CFAD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				908FE65C2B70E11F0027CFAD /* AppDelegate.swift */,
+				908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +290,6 @@
 			files = (
 				908FE66C2B70E1200027CFAD /* LaunchScreen.storyboard in Resources */,
 				908FE6692B70E1200027CFAD /* Assets.xcassets in Resources */,
-				908FE6642B70E11F0027CFAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908FE6612B70E11F0027CFAD /* ViewController.swift in Sources */,
+				908FE6612B70E11F0027CFAD /* MainVC.swift in Sources */,
+				908FE6932B70E41F0027CFAD /* NetworkingViewModel.swift in Sources */,
+				906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */,
 				908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */,
+				906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */,
 				908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */,
+				908FE6912B70E27E0027CFAD /* CheckinView.swift in Sources */,
 				908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */,
+				906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +359,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		908FE6622B70E11F0027CFAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				908FE6632B70E11F0027CFAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		908FE66A2B70E1200027CFAD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,11 +496,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q6783FX5A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmployeeCheckin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,11 +523,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q6783FX5A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmployeeCheckin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
