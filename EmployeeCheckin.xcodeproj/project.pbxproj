@@ -10,6 +10,8 @@
 		906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */; };
 		906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EE2B70F6D200DF7A62 /* Extensions.swift */; };
 		906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */; };
+		906BA1FA2B72855E00DF7A62 /* InitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F92B72855E00DF7A62 /* InitVC.m */; };
+		908C3C492B738EB20027426C /* SwiftUIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C3C482B738EB20027426C /* SwiftUIWrapper.swift */; };
 		908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65C2B70E11F0027CFAD /* AppDelegate.swift */; };
 		908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */; };
 		908FE6612B70E11F0027CFAD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6602B70E11F0027CFAD /* MainVC.swift */; };
@@ -45,6 +47,10 @@
 		906BA1EE2B70F6D200DF7A62 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
 		906BA1F52B724B0500DF7A62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		906BA1F82B72855D00DF7A62 /* EmployeeCheckin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmployeeCheckin-Bridging-Header.h"; sourceTree = "<group>"; };
+		906BA1F92B72855E00DF7A62 /* InitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitVC.m; sourceTree = "<group>"; };
+		906BA1FB2B7286A000DF7A62 /* InitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitVC.h; sourceTree = "<group>"; };
+		908C3C482B738EB20027426C /* SwiftUIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWrapper.swift; sourceTree = "<group>"; };
 		908FE6592B70E11F0027CFAD /* EmployeeCheckin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeCheckin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908FE65C2B70E11F0027CFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 			children = (
 				908FE6602B70E11F0027CFAD /* MainVC.swift */,
 				908FE6902B70E27E0027CFAD /* CheckinView.swift */,
+				906BA1F92B72855E00DF7A62 /* InitVC.m */,
+				906BA1F82B72855D00DF7A62 /* EmployeeCheckin-Bridging-Header.h */,
+				906BA1FB2B7286A000DF7A62 /* InitVC.h */,
+				908C3C482B738EB20027426C /* SwiftUIWrapper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +262,7 @@
 				TargetAttributes = {
 					908FE6582B70E11F0027CFAD = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 					908FE6712B70E1200027CFAD = {
 						CreatedOnToolsVersion = 15.1;
@@ -321,7 +332,9 @@
 				906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */,
 				908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */,
 				908FE6912B70E27E0027CFAD /* CheckinView.swift in Sources */,
+				908C3C492B738EB20027426C /* SwiftUIWrapper.swift in Sources */,
 				908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */,
+				906BA1FA2B72855E00DF7A62 /* InitVC.m in Sources */,
 				906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +418,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -422,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -468,6 +482,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -479,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -494,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q6783FX5A;
@@ -511,6 +527,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.megisila.EmployeeCheckin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EmployeeCheckin/Views/EmployeeCheckin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q6783FX5A;
@@ -538,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.megisila.EmployeeCheckin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EmployeeCheckin/Views/EmployeeCheckin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
