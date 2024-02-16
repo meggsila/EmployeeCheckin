@@ -56,7 +56,7 @@ class DataManager {
     }
     
     //MARK: - Checkin Date Time
-    func saveCheckinDateTime(checkinDateTime: String, _ success: @escaping ((Bool) -> Void)) {
+    func saveCheckinDateTime(checkinDateTime: String) {
         let context = persistentContainer.viewContext
         
         let fetchRequest: NSFetchRequest<Employee> = Employee.fetchRequest()
@@ -73,9 +73,8 @@ class DataManager {
             }
             
             try context.save()
-            success(true)
         } catch {
-            success(false)
+            print("Error \(error)")
         }
     }
 

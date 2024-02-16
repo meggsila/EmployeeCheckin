@@ -64,10 +64,9 @@ struct CheckinView: View {
         }
 
         .onAppear {
-            if UserDefaults.standard.bool(forKey: "isAppAlreadyLaunchedOnce") {
-                selectedDate = actionViewModel.fetchCheckinDateTime()
+            if let fetchedDate = actionViewModel.fetchCheckinDateTime() {
+                selectedDate = fetchedDate
             } else {
-                UserDefaults.standard.setValue(true, forKey: "isAppAlreadyLaunchedOnce")
                 networkingViewModel.fetchInitialDateTime { fetchedDate in
                     if let fetchedDate = fetchedDate {
                         selectedDate = fetchedDate
@@ -78,6 +77,7 @@ struct CheckinView: View {
     }
     
     func submitButtonAction() {
+        actionViewModel.saveCheckinDateTime(selectedDate: selectedDate)
         checkinViewDelegate.dismissViewController()
     }
 }
