@@ -13,6 +13,7 @@
 @interface InitVC ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UITextView *messageTextView;
 @property (nonatomic, strong) UIButton *startButton;
 
 @end
@@ -35,6 +36,15 @@
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.titleLabel];
     
+    self.messageTextView = [[UITextView alloc] init];
+    self.messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.messageTextView.text = @"Please check in";
+    self.messageTextView.font = [UIFont systemFontOfSize:22 weight:UIFontWeightMedium];
+    self.messageTextView.textColor = [UIColor labelColor];
+    self.messageTextView.textAlignment = NSTextAlignmentCenter;
+    self.messageTextView.backgroundColor = [UIColor systemGray6Color];
+    [self.view addSubview:self.messageTextView];
+    
     self.startButton = [[UIButton alloc] init];
     self.startButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
@@ -51,8 +61,13 @@
         [self.titleLabel.widthAnchor constraintEqualToConstant:self.view.frame.size.width - 40],
         [self.titleLabel.heightAnchor constraintEqualToConstant:50],
         
+        [self.messageTextView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.messageTextView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
+        [self.messageTextView.widthAnchor constraintEqualToConstant:self.view.frame.size.width - 40],
+        [self.messageTextView.heightAnchor constraintEqualToConstant:50],
+        
         [self.startButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.startButton.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
+        [self.startButton.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant: -50],
         [self.startButton.widthAnchor constraintEqualToConstant:self.view.frame.size.width - 40],
         [self.startButton.heightAnchor constraintEqualToConstant:50],
     ]];
