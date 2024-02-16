@@ -83,13 +83,15 @@ class DataManager {
 
     func fetchCheckinDateTime() -> String? {
         let fetchRequest: NSFetchRequest<Employee> = Employee.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "check_in_date_time", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
 
         do {
             let employees = try persistentContainer.viewContext.fetch(fetchRequest)
 
-            if let checkinDateTime = employees.last?.check_in_date_time {
+            if let firstEmployee = employees.first, let checkinDateTime = firstEmployee.check_in_date_time {
                 return checkinDateTime
-            }
+            } 
         } catch {
             print("Error \(error)")
         }
