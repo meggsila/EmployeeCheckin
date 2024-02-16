@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckinView: View {
-    @ObservedObject private var actionViewModel = CheckinViewModel()
+    @ObservedObject var actionViewModel = CheckinViewModel.shared
     @ObservedObject private var networkingViewModel = NetworkingViewModel()
     
     @State private var selectedDate = Date()

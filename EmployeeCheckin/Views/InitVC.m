@@ -12,6 +12,7 @@
 
 @interface InitVC ()
 
+@property (nonatomic, strong) CheckinViewModel *actionViewModel;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UITextView *messageTextView;
 @property (nonatomic, strong) UIButton *startButton;
@@ -23,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:true];
+    [self fetchData];
 }
 
 - (void)setupUI {
@@ -38,8 +44,7 @@
     
     self.messageTextView = [[UITextView alloc] init];
     self.messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.messageTextView.text = @"Please check in";
-    self.messageTextView.font = [UIFont systemFontOfSize:22 weight:UIFontWeightMedium];
+    self.messageTextView.font = [UIFont systemFontOfSize:20 weight:UIFontWeightRegular];
     self.messageTextView.textColor = [UIColor labelColor];
     self.messageTextView.textAlignment = NSTextAlignmentCenter;
     self.messageTextView.backgroundColor = [UIColor systemGray6Color];
@@ -64,7 +69,7 @@
         [self.messageTextView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [self.messageTextView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
         [self.messageTextView.widthAnchor constraintEqualToConstant:self.view.frame.size.width - 40],
-        [self.messageTextView.heightAnchor constraintEqualToConstant:50],
+        [self.messageTextView.heightAnchor constraintEqualToConstant:60],
         
         [self.startButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [self.startButton.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant: -50],
@@ -73,8 +78,23 @@
     ]];
 }
 
+- (void)fetchData {
+    self.actionViewModel = [CheckinViewModel shared];
+    
+    NSDate *fetchedDate = [self.actionViewModel fetchCheckinDateTime];
+    if (fetchedDate != nil) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+        NSString *formattedDate = [dateFormatter stringFromDate:fetchedDate];
+        self.messageTextView.text = [NSString stringWithFormat:@"Hi Megi welcome back, your last check in date is : %@", formattedDate];
+    } else {
+        self.messageTextView.text = @"Please check in";
+    }
+}
+
 - (void)startButtonAction {
     CheckinViewWrapper *wrapper = [[CheckinViewWrapper alloc] init];
+    wrapper.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:wrapper animated:YES completion:nil];
 }
 
