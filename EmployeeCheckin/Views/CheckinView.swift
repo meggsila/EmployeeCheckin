@@ -16,6 +16,12 @@ struct CheckinView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     
+    private var checkinViewDelegate: CheckinViewDelegate
+    
+    init(delegate:  CheckinViewDelegate) {
+        checkinViewDelegate = delegate
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -72,15 +78,6 @@ struct CheckinView: View {
     }
     
     func submitButtonAction() {
-        showAlert = true
-        actionViewModel.isSavedSuccessfully(selectedDate: selectedDate) { success in
-            if success {
-                alertTitle = "Success"
-                alertMessage = "Your check-in time: \(selectedDate.toString()) has been saved successfully."
-            } else {
-                alertTitle = "Error"
-                alertMessage = "Unfortunately, your check-in time was not saved. An error occurred during the process."
-            }
-        }
+        checkinViewDelegate.dismissViewController()
     }
 }

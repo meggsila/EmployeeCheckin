@@ -59,7 +59,7 @@
 }
 
 - (void)startButtonAction {
-    SwiftUIWrapper *wrapper = [[SwiftUIWrapper alloc] init];
+    CheckinViewWrapper *wrapper = [[CheckinViewWrapper alloc] init];
     [self presentViewController:wrapper animated:YES completion:nil];
 }
 

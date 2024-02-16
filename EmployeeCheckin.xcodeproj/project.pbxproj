@@ -11,10 +11,9 @@
 		906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EE2B70F6D200DF7A62 /* Extensions.swift */; };
 		906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */; };
 		906BA1FA2B72855E00DF7A62 /* InitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F92B72855E00DF7A62 /* InitVC.m */; };
-		908C3C492B738EB20027426C /* SwiftUIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C3C482B738EB20027426C /* SwiftUIWrapper.swift */; };
+		908C3C492B738EB20027426C /* CheckinViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C3C482B738EB20027426C /* CheckinViewWrapper.swift */; };
 		908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65C2B70E11F0027CFAD /* AppDelegate.swift */; };
 		908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */; };
-		908FE6612B70E11F0027CFAD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6602B70E11F0027CFAD /* MainVC.swift */; };
 		908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */; };
 		908FE6692B70E1200027CFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908FE6682B70E1200027CFAD /* Assets.xcassets */; };
 		908FE66C2B70E1200027CFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908FE66A2B70E1200027CFAD /* LaunchScreen.storyboard */; };
@@ -50,11 +49,10 @@
 		906BA1F82B72855D00DF7A62 /* EmployeeCheckin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmployeeCheckin-Bridging-Header.h"; sourceTree = "<group>"; };
 		906BA1F92B72855E00DF7A62 /* InitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitVC.m; sourceTree = "<group>"; };
 		906BA1FB2B7286A000DF7A62 /* InitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitVC.h; sourceTree = "<group>"; };
-		908C3C482B738EB20027426C /* SwiftUIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWrapper.swift; sourceTree = "<group>"; };
+		908C3C482B738EB20027426C /* CheckinViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewWrapper.swift; sourceTree = "<group>"; };
 		908FE6592B70E11F0027CFAD /* EmployeeCheckin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeCheckin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908FE65C2B70E11F0027CFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		908FE6602B70E11F0027CFAD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		908FE6662B70E11F0027CFAD /* EmployeeCheckin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCheckin.xcdatamodel; sourceTree = "<group>"; };
 		908FE6682B70E1200027CFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		908FE66B2B70E1200027CFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,12 +94,11 @@
 		906BA1E82B70F30B00DF7A62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				908FE6602B70E11F0027CFAD /* MainVC.swift */,
 				908FE6902B70E27E0027CFAD /* CheckinView.swift */,
 				906BA1F92B72855E00DF7A62 /* InitVC.m */,
 				906BA1F82B72855D00DF7A62 /* EmployeeCheckin-Bridging-Header.h */,
 				906BA1FB2B7286A000DF7A62 /* InitVC.h */,
-				908C3C482B738EB20027426C /* SwiftUIWrapper.swift */,
+				908C3C482B738EB20027426C /* CheckinViewWrapper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,14 +322,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908FE6612B70E11F0027CFAD /* MainVC.swift in Sources */,
 				908FE6932B70E41F0027CFAD /* NetworkingViewModel.swift in Sources */,
 				906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */,
 				908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */,
 				906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */,
 				908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */,
 				908FE6912B70E27E0027CFAD /* CheckinView.swift in Sources */,
-				908C3C492B738EB20027426C /* SwiftUIWrapper.swift in Sources */,
+				908C3C492B738EB20027426C /* CheckinViewWrapper.swift in Sources */,
 				908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */,
 				906BA1FA2B72855E00DF7A62 /* InitVC.m in Sources */,
 				906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */,
