@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905F76D92B7F86940038A001 /* EmployeeCheckin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */; };
 		906BA1EC2B70F36500DF7A62 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */; };
 		906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1EE2B70F6D200DF7A62 /* Extensions.swift */; };
 		906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */; };
@@ -14,7 +15,6 @@
 		908C3C492B738EB20027426C /* CheckinViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C3C482B738EB20027426C /* CheckinViewWrapper.swift */; };
 		908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65C2B70E11F0027CFAD /* AppDelegate.swift */; };
 		908FE65F2B70E11F0027CFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE65E2B70E11F0027CFAD /* SceneDelegate.swift */; };
-		908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */; };
 		908FE6692B70E1200027CFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908FE6682B70E1200027CFAD /* Assets.xcassets */; };
 		908FE66C2B70E1200027CFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908FE66A2B70E1200027CFAD /* LaunchScreen.storyboard */; };
 		908FE6772B70E1200027CFAD /* EmployeeCheckinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FE6762B70E1200027CFAD /* EmployeeCheckinTests.swift */; };
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		905F76D62B7F7FCE0038A001 /* EmployeeCheckinV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeCheckinV2.xcdatamodel; sourceTree = "<group>"; };
 		906BA1EB2B70F36500DF7A62 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		906BA1EE2B70F6D200DF7A62 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		906BA1F32B7238D300DF7A62 /* CheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
@@ -272,7 +273,7 @@
 				};
 			};
 			buildConfigurationList = 908FE6542B70E11F0027CFAD /* Build configuration list for PBXProject "EmployeeCheckin" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -323,8 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				908FE6932B70E41F0027CFAD /* NetworkingViewModel.swift in Sources */,
+				905F76D92B7F86940038A001 /* EmployeeCheckin.xcdatamodeld in Sources */,
 				906BA1F42B7238D300DF7A62 /* CheckinViewModel.swift in Sources */,
-				908FE6672B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld in Sources */,
 				906BA1EF2B70F6D200DF7A62 /* Extensions.swift in Sources */,
 				908FE65D2B70E11F0027CFAD /* AppDelegate.swift in Sources */,
 				908FE6912B70E27E0027CFAD /* CheckinView.swift in Sources */,
@@ -676,9 +677,10 @@
 		908FE6652B70E11F0027CFAD /* EmployeeCheckin.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				905F76D62B7F7FCE0038A001 /* EmployeeCheckinV2.xcdatamodel */,
 				908FE6662B70E11F0027CFAD /* EmployeeCheckin.xcdatamodel */,
 			);
-			currentVersion = 908FE6662B70E11F0027CFAD /* EmployeeCheckin.xcdatamodel */;
+			currentVersion = 905F76D62B7F7FCE0038A001 /* EmployeeCheckinV2.xcdatamodel */;
 			path = EmployeeCheckin.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

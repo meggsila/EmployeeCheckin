@@ -19,6 +19,13 @@ import Combine
         return nil
     }
     
+    @objc func fetchName() -> String? {
+        if let name = DataManager.shared.fetchName() {
+            return name
+        }
+        return nil
+    }
+    
     func saveCheckinDateTime(selectedDate: Date) {
         DataManager.shared.saveCheckinDateTime(checkinDateTime: selectedDate.toString())
     }

@@ -19,7 +19,7 @@ class DataManager {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "EmployeeCheckin")
+        let container = NSPersistentContainer(name: "EmployeeCheckinV2", managedObjectModel: NSManagedObjectModel.mergedModel(from: [Bundle.main])!)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -36,7 +36,10 @@ class DataManager {
                 fatalError("Error \(error), \(error.userInfo)")
             }
         })
-        //container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        
         return container
     }()
     
@@ -86,6 +89,22 @@ class DataManager {
 
             if let checkinDateTime = employees.last?.check_in_date_time {
                 return checkinDateTime
+            }
+        } catch {
+            print("Error \(error)")
+        }
+
+        return nil
+    }
+    
+    func fetchName() -> String? {
+        let fetchRequest: NSFetchRequest<Employee> = Employee.fetchRequest()
+
+        do {
+            let employees = try persistentContainer.viewContext.fetch(fetchRequest)
+
+            if let name = employees.last?.name {
+                return name
             }
         } catch {
             print("Error \(error)")

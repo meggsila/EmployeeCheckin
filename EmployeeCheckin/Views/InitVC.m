@@ -82,11 +82,13 @@
     self.actionViewModel = [CheckinViewModel shared];
     
     NSDate *fetchedDate = [self.actionViewModel fetchCheckinDateTime];
-    if (fetchedDate != nil) {
+    NSString *fetchedName = [self.actionViewModel fetchName];
+    
+    if (fetchedDate != nil && fetchedName != nil) {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
         NSString *formattedDate = [dateFormatter stringFromDate:fetchedDate];
-        self.messageTextView.text = [NSString stringWithFormat:@"Hi Megi welcome back, your last check in date is : %@", formattedDate];
+        self.messageTextView.text = [NSString stringWithFormat:@"Hi %@ welcome back, your last check in date is : %@", fetchedName, formattedDate];
     } else {
         self.messageTextView.text = @"Please check in";
     }
